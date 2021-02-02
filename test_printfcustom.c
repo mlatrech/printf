@@ -14,3 +14,4 @@ int		main()
 	free(to_insert);
 	return(1);
 }
+/*pour verifier*/
