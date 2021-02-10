@@ -6,7 +6,7 @@
 /*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 15:15:12 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/02/10 15:15:29 by mlatrech         ###   ########lyon.fr   */
+/*   Updated: 2021/02/10 15:25:02 by mlatrech         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,8 @@ int			ft_insert_strseg(char *to_change, int start, int end,
 	free(end_buffer);
 	return (1);
 }
+/*
+
+return -1 if you have to not free to_change in the calling question, 0 else.
+
+*/
