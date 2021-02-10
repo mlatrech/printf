@@ -12,7 +12,7 @@ int		argmanager_cspd(char *toprint, va_list argptr)
 			if(!(i = pf_c_arg(toprint, argptr)))
 				return (-1);
 		if (toprint[pos] == 's')
-			if(!(i =pf_s_arg(toprint, argptr)))
+			if(!(i = pf_s_arg(toprint, argptr)))
 				return (-1);
 		if (toprint[pos] == 'p')
 			if(!(i = pf_p_arg(toprint, argptr)))

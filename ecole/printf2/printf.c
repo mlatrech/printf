@@ -10,7 +10,7 @@ int		ft_printf(const char *s, ...)
 	toprint = ft_strdup(s);
 	while (toprint)
 	{
-		if (!(i += print_del(&toprint)))
+		if (!(i += print_del(toprint)))
 			return (-1);
 		if (!(i += conv_detec(toprint, ap)))
 			return (-1);
@@ -18,4 +18,4 @@ int		ft_printf(const char *s, ...)
 }
 
 /*boucler le premier whilejusqu'a ce que toprint soit vide
-choses a imprimer puis renvoyer la vleur des I cumulee*/
+choses a imprimer puis renvoyer la valeur des I cumulee*/
