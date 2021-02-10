@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ft_printf.c                                      .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: mlatrech <mlatrech@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/02/14 10:39:57 by mlatrech     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/17 20:48:16 by mlatrech    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/10 14:53:15 by mlatrech          #+#    #+#             */
+/*   Updated: 2021/02/10 14:53:18 by mlatrech         ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
@@ -45,6 +44,7 @@ int			ft_printf(const char *s, ...)//bite
 	int		nbarg;
 	char	*toprint;
 
+	va_start(argptr, s);
 	if (!s)
 		return (0);
 	toprint = ft_strdup(s);
@@ -54,4 +54,5 @@ int			ft_printf(const char *s, ...)//bite
 		return (-1);
 	}
 	free(toprint);
+	va_end(argptr);
 }

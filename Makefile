@@ -3,13 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/12/03 14:34:09 by mlatrech          #+#    #+#              #
-#    Updated: 2021/02/01 04:24:05 by marvin           ###   ########.fr        #
+#    Created: 2021/02/10 15:01:05 by mlatrech          #+#    #+#              #
+#    Updated: 2021/02/10 15:01:06 by mlatrech         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
-
 
 HEADER = libft.h
 

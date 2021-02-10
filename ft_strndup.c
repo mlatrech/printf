@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 21:46:43 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/02/01 05:59:59 by marvin           ###   ########.fr       */
+/*   Created: 2021/02/10 15:00:12 by mlatrech          #+#    #+#             */
+/*   Updated: 2021/02/10 15:03:05 by mlatrech         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char			*ft_strndup(const char *s1, int start)
 {
 	char		*cpy;
 	char		*tmp;
-	int		i;
-	int		a;
+	int			i;
+	int			a;
 
 	a = 0;
 	tmp = (char *)s1;

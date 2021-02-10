@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_insert_strseg.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/10 15:15:12 by mlatrech          #+#    #+#             */
+/*   Updated: 2021/02/10 15:15:29 by mlatrech         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int			err_manchange(char *str1, char *str2)
@@ -35,14 +47,4 @@ int			ft_insert_strseg(char *to_change, int start, int end,
 	free(start_buffer);
 	free(end_buffer);
 	return (1);
-}/*renvoi 0 en cas d'erreur malloc classique,
--1 en cas d'erreur sur tochange (il faut donc ne pas le free
- dans la fct suivante)*/
-
-
-
-
-/*peut leak car return ne free pas tout si le malloc echoue : solution 
-compartimenter la fonction en fonctions subsequentes qui 
-free et return start_buffer et end_buffer a chaque possibilité 
-d'error ou alors faire des codes erreurs et les gerer*/
+}
