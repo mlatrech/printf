@@ -23,7 +23,7 @@ Nom du programme : libftprintf.a
 Makefile : all clean fclean re bonus
 fct authorisees : malloc free write va_star, va_arg, va-copy, va_end
 
-le prtototype de ft_printf devra etre int ft_printf(const char *, ...)
+le prototype de ft_printf devra etre int ft_printf(const char *, ...)
 faut recoder printf de la libc
 pas gérer le buffer
 doit gérer les conversions : cspdiuxX%
@@ -59,5 +59,22 @@ l'etoile fait passer a l'argument suivant en spécifiant que sa valeur doit
 d'abord etre remplacée par un des argument (suivant ou spécifié par *m$ ou 
 m est le numero de l'argument).
 
+
+
+
+idee :on imprime tout au fur et a mesure parceque avec une idee de remplacer
+au fur et a mesure je vais me heurter au probleme de la conversion %% qui va
+trigger en boucle
+
+Du coup tout ce qui n'est pas un conversion on imprime direct sans se poser de
+question.
+
+Des qu'on rencontre une conversion on l'envoie dans l'unité de traitement de
+cette conversion, chaque unité de traitement de conversion doit se charger
+d'appeler les diverses fonction de pré-conversion adaptées
+
+conversions : 
+c : la conversion traduit l'int en 1 seul char et l'ecrit après la FW (avant si
+-).
 
 */

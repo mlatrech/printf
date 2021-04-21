@@ -1,7 +1,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int		main()
+/*int		main()
 {
 	char	*to_change;
 	char	*to_insert;
@@ -13,5 +13,11 @@ int		main()
 	free(to_change);
 	free(to_insert);
 	return(1);
-}
+}*/
+
 /*pour verifier*/
+int	main()
+{
+	printf("%40.0c\n", 'c');
+	return(0);
+}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_insert_strseg.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 15:15:12 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/02/10 15:25:02 by mlatrech         ###   ########lyon.fr   */
+/*   Updated: 2021/04/21 05:22:33 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ int			ft_insert_strseg(char *to_change, int start, int end,
 }
 /*
 
-return -1 if you have to not free to_change in the calling question, 0 else.
+return -1 if you have to not free to_change in the calling fonction, 0 else.
 
 */
