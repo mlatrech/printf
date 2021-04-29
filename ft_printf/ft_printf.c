@@ -86,5 +86,12 @@ imprimer.
 p : prend un void *x et l'imprime en hexadecimal. Il faut donc traduire l'adresse
 du pointeur que l'on recoit en hexa decimal. Pas d'effet de la precision.
 
+d / i : ItoA --> la précision indique le nombre de chiffres a print MINIMUM. Si
+le nombre est plus petit on met des zeros a gauche. Si on met une précision de 0
+et que nombre est 0 la sortie est vide.
 
+u : pareil mais unsigned
+
+x / X : ItoX --> convertit et imprime en format hexadécimal. x = lettre en
+minuscule. X = lettres en majuscule. Sinon pareil que d/i/u.
 */
