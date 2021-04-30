@@ -3,51 +3,82 @@
 /*                                                        :::      ::::::::   */
 /*   printing_facility.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 15:27:47 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/02/10 14:54:52 by mlatrech         ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 22:03:49 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf2.h"
 #include <stdio.h>
 
-int		printer(char *printable)
+int			err_man1(char *str1)
+{
+	free(str1);
+	return (-1);
+}
+
+int			err_man2(char *str1, char *str2)
+{
+	free(str1);
+	free(str2);
+	return (-1);
+}
+
+
+int			printer(char *printable)
 {
 	int	i;
 
 	i = 0;
-	while (printable[i++]);
-	ft_putstr(printable);
+	while (printable[i++])
+		ft_putstr(printable);
 	return (i);
 }
 
-int		print_del(char *toprint)
+int			sub_printdel(char *toprint, char *tosend, int i)
 {
-	int		i;
-	char	*tosend;
 	char	*buffer;
 
 	buffer = NULL;
-	if (!(tosend = ft_strrndup(toprint, i = ft_strchr(toprint, '%'))))
+	if (!(tosend = ft_strrndup_inc(toprint, i - 1)))
 		return (-1);
-	if (i > 0)
-		if (!(buffer = ft_strndup(toprint, i - 1)))
-			return (err_manager(1, tosend));
+	if (!(buffer = ft_strndup(toprint, i)))
+		return (err_man1(tosend));
 	free(toprint);
-	if (!(toprint = ft_strdup(tosend)))
-		return (err_manager(2, buffer, tosend));
-	free(tosend);
-	i = 0;
-	if (buffer)
+	if (!(toprint = ft_strdup(buffer)))
+		return (err_man2(buffer, tosend));
+	free(buffer);
+	return (1);
+}
+
+int			print_del(char *toprint)
+{
+	int		i;
+	char	*tosend;
+	
+	tosend = NULL;
+	i = ft_strchr(toprint, '%'); // renvoie pas un int mais un pointeur a changer
+	if (i)
 	{
-		i = printer(buffer);
-		free(buffer);
+		if (sub_printdel(toprint, tosend, i) == -1)
+			return (-1);
 	}
-	return (i);
+	else
+	{
+		if (!(tosend = ft_strdup(toprint)))
+			return (-1);
+		toprint[0] = 0;
+	}
+	i = printer(tosend);
+	free(tosend);
 }
 
 /*partie {[("finie")]} destinée a l'impression sur la sortie std des parties
 preecrites de la chaine et les supprimes de la chaine de maniere a ce
 qu'une conversion soit tjrs en debut de toprint*/
+
+/* me faut un autre strchr celui la pas adapté : il faut qu'il prenne en parametre
+I pour garder la pos du signe cherché et renvoyer 1 ou 0 en fonction de si le
+signe a été trouvé ou non */

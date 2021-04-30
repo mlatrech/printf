@@ -94,4 +94,6 @@ u : pareil mais unsigned
 
 x / X : ItoX --> convertit et imprime en format hexadécimal. x = lettre en
 minuscule. X = lettres en majuscule. Sinon pareil que d/i/u.
+
+% : ecrit % et ne prend aucun flag.
 */

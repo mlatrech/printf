@@ -18,10 +18,6 @@
 /*pour verifier*/
 int	main()
 {
-	char	a = 12;
-	void	*c;
-
-	c = &a;
-	printf("%.8p\n", c);
+	printf("%%\n");
 	return(0);
 }

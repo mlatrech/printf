@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrndup.c                                      :+:      :+:    :+:   */
+/*   ft_strrndup_inc.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 15:00:30 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/02/10 15:03:12 by mlatrech         ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 20:17:17 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrndup(const char *s1, int end)
+char	*ft_strrndup_inc(const char *s1, int end)
 {
 	char	*cpy;
 	char	*tmp;

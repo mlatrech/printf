@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
+/*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 14:53:52 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/02/10 14:53:55 by mlatrech         ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 20:17:39 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *str, int fd);
 void				ft_putnbr_fd(int nb, int fd);
 void				ft_putendl_fd(char *str, int fd);
-char				*ft_strrndup(const char *s1, int end);
+char				*ft_strrndup_inc(const char *s1, int end);
+char				*ft_strrndup_exc(const char *s1, int end);
 char				*ft_strndup(const char *s1, int start);
 int					ft_insert_strseg(char *to_change, int start, int end,
 					char *to_insert);
