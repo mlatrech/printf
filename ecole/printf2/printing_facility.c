@@ -6,7 +6,7 @@
 /*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 15:27:47 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/04/30 22:03:49 by aviscogl         ###   ########lyon.fr   */
+/*   Updated: 2021/05/09 01:20:49 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,17 @@ int			sub_printdel(char *toprint, char *tosend, int i)
 
 int			print_del(char *toprint)
 {
-	int		i;
+	int		*i;
+	int		a;
 	char	*tosend;
 	
+	i[0] = 0;
 	tosend = NULL;
-	i = ft_strchr(toprint, '%'); // renvoie pas un int mais un pointeur a changer
-	if (i)
+	if (!(i = malloc(sizeof(int))))
+		return (-1);
+	if (ft_strchr_alt(toprint, '%', i))
 	{
-		if (sub_printdel(toprint, tosend, i) == -1)
+		if (sub_printdel(toprint, tosend, i[0]) == -1)
 			return (-1);
 	}
 	else
@@ -71,8 +74,10 @@ int			print_del(char *toprint)
 			return (-1);
 		toprint[0] = 0;
 	}
-	i = printer(tosend);
+	a = printer(tosend);
 	free(tosend);
+	free(i);
+	return (a);
 }
 
 /*partie {[("finie")]} destinée a l'impression sur la sortie std des parties
@@ -80,5 +85,5 @@ preecrites de la chaine et les supprimes de la chaine de maniere a ce
 qu'une conversion soit tjrs en debut de toprint*/
 
 /* me faut un autre strchr celui la pas adapté : il faut qu'il prenne en parametre
-I pour garder la pos du signe cherché et renvoyer 1 ou 0 en fonction de si le
+I pour garder la pos du signe cherché et renvoyer >=1 ou 0 en fonction de si le
 signe a été trouvé ou non */

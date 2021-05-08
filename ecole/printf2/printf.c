@@ -6,7 +6,7 @@
 /*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 14:54:20 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/04/30 22:04:36 by aviscogl         ###   ########lyon.fr   */
+/*   Updated: 2021/05/08 23:53:32 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,20 @@ int		ft_printf(const char *s, ...)
 	char	*toprint;
 	va_list	ap;
 	int		i;
+	int		a;
 
 	i = 0;
+	a = 0;
 	toprint = ft_strdup(s);
 	while (toprint)
 	{
-		if (!(i += print_del(toprint)))
+		if (!(a += print_del(toprint)))
 			return (-1);
-		if (!(i += conv_detec(toprint, ap))) /* ne doit en aucun cas modifier i trouver par quoi le remplacer*/
+		if (a < i)
+			return -1;
+		else
+			i += a;
+		if (!(conv_detec(toprint, ap))) /* ne doit en aucun cas modifier i trouver par quoi le remplacer*/
 			return (-1);
 	}
 	return (i);

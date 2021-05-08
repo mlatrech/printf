@@ -6,7 +6,7 @@
 /*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 14:53:52 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/04/30 20:17:39 by aviscogl         ###   ########lyon.fr   */
+/*   Updated: 2021/05/09 00:02:01 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,5 @@ char				*ft_strrndup_exc(const char *s1, int end);
 char				*ft_strndup(const char *s1, int start);
 int					ft_insert_strseg(char *to_change, int start, int end,
 					char *to_insert);
+char				*ft_strchr_alt(const char *s, int c, int i);
 #endif
