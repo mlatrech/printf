@@ -45,7 +45,8 @@ COMMENT TRAVAILLER LE SUJET :
 Les va_list: 
 
 Il faut naviguer dans les arguments variables grace aux va_list.
-D'abord il faut initialiser la va list avec va_start puis naviguer avec va_arg.
+D'abord il faut initialiser la va list avec va_start(nom_de_valist,
+dernier_argument_connu) puis naviguer avec va_arg.
 va_arg a besoin d'une variable du bon type auquel transferer la valeur de son 
 argument actuel.
 Doit se finir par un va_end.

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_1.c                                          :+:      :+:    :+:   */
+/*   splitter.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 14:54:39 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/02/10 14:54:42 by mlatrech         ###   ########lyon.fr   */
+/*   Updated: 2021/05/12 07:04:50 by mlatrech         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		argmanager_cspd(char *toprint, va_list ap)
 	int	pos;
 	int	i;
 
-	pos = -1;
+	pos = 0;
 	while (toprint[++pos])
 	{
 		if (toprint[pos] == 'c')
@@ -41,7 +41,7 @@ int		argmanager_ixXu(char *toprint, va_list ap)
 	int	pos;
 	int	i;
 
-	pos = -1;
+	pos = 0;
 	while (toprint[++pos])
 	{
 		if (toprint[pos] == 'i')
@@ -57,7 +57,7 @@ int		argmanager_ixXu(char *toprint, va_list ap)
 			if(!(i = pf_X_arg(toprint, ap)))
 				return (-1);
 		if (toprint[pos] == '%')
-			if(!(i = pf_wtf_arg(toprint, ap)))
+			if(!(i = pf_wtf_arg(toprint)))
 				return (-1);
 	}
 	return (i);
@@ -69,7 +69,7 @@ int		conv_detec(char *toprint, va_list ap)
 	int	toret;
 
 	toret = -1;
-	i = -1;
+	i = 0;
 	while (toprint[++i])
 	{
 		if (toprint[i] == 'c' || toprint[i] == 'p' ||

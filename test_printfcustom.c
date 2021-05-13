@@ -16,18 +16,9 @@
 }*/
 
 /*pour verifier*/
-int	bite(int i)
-{
-	i = 2;
-	return(0);
-}
+
 int	main()
 {
-	int	*i;
-
-	i = malloc(sizeof(int));
-	bite(i[0]);
-	printf("%i\n", i[0]);
-	free(i);
+	printf("%c\n", 'c');
 	return(0);
 }
