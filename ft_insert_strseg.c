@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_insert_strseg.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 15:15:12 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/04/21 05:22:33 by aviscogl         ###   ########lyon.fr   */
+/*   Updated: 2021/05/18 16:23:23 by mlatrech         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int			ft_insert_strseg(char *to_change, int start, int end,
 	char	*start_buffer;
 	char	*end_buffer;
 
-	if (!(start_buffer = ft_strrndup(to_change, start)))
+	if (!(start_buffer = ft_strrndup_inc(to_change, start)))
 		return (0);
 	if (!(end_buffer = ft_strndup(to_change, end)))
 		return (err_man1(start_buffer));

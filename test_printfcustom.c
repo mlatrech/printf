@@ -19,6 +19,6 @@
 
 int	main()
 {
-	printf("%c\n", 'c');
+	printf("%*c\n", 12, 'c');
 	return(0);
 }

@@ -14,5 +14,6 @@
 
 int		pf_c_arg(char *toprint, va_list ap)
 {
-	
+	if (!(star_manager(toprint, ap)))
+		return (-1);
 }

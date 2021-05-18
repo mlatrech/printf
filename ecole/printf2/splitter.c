@@ -6,7 +6,7 @@
 /*   By: mlatrech <mlatrech@students.42lyon.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 14:54:39 by mlatrech          #+#    #+#             */
-/*   Updated: 2021/05/12 07:04:50 by mlatrech         ###   ########lyon.fr   */
+/*   Updated: 2021/05/18 16:11:52 by mlatrech         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ int		argmanager_cspd(char *toprint, va_list ap)
 		if (toprint[pos] == 'c')
 			if(!(i = pf_c_arg(toprint, ap)))
 				return (-1);
-		if (toprint[pos] == 's')
+		else if (toprint[pos] == 's')
 			if(!(i =pf_s_arg(toprint, ap)))
 				return (-1);
-		if (toprint[pos] == 'p')
+		else if (toprint[pos] == 'p')
 			if(!(i = pf_p_arg(toprint, ap)))
 				return (-1);
-		if (toprint[pos] == 'd')
+		else if (toprint[pos] == 'd')
 			if(!(i = pf_d_arg(toprint, ap)))
 				return (-1);
 	}
@@ -47,16 +47,16 @@ int		argmanager_ixXu(char *toprint, va_list ap)
 		if (toprint[pos] == 'i')
 			if(!(i = pf_i_arg(toprint, ap)))
 				return (-1);
-		if (toprint[pos] == 'u')
+		else if (toprint[pos] == 'u')
 			if(!(i =pf_u_arg(toprint, ap)))
 				return (-1);
-		if (toprint[pos] == 'x')
+		else if (toprint[pos] == 'x')
 			if(!(i = pf_x_arg(toprint, ap)))
 				return (-1);
-		if (toprint[pos] == 'X')
+		else if (toprint[pos] == 'X')
 			if(!(i = pf_X_arg(toprint, ap)))
 				return (-1);
-		if (toprint[pos] == '%')
+		else if (toprint[pos] == '%')
 			if(!(i = pf_wtf_arg(toprint)))
 				return (-1);
 	}
